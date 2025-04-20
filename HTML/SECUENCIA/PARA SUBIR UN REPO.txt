@@ -1,11 +1,30 @@
+# 1. Inicializar el repositorio local
 git init
-git config user.name (NOMBRE DE USUARIO)
-git config user.email (CORREO DE GITHUB)
 
+# 2. Configurar nombre de usuario y correo electrónico
+git config user.name "TU NOMBRE DE USUARIO"
+git config user.email "tu_correo@ejemplo.com"
+
+# (Opcional) Verificar configuración actual
 git config --list
-git remote add origen (URL REPOSITORIO EN GITHUB)
-git remote set-url https://(TOKEN)@(URL DEL REPOSITORO)
+
+# 3. Agregar la URL del repositorio remoto
+git remote add origin https://github.com/USUARIO/NOMBRE-REPO.git
+
+# 4. (Opcional) Si quieres usar un token de acceso personal para autenticar (reemplaza TOKEN y URL)
+# Nota: Requiere tener el token generado en GitHub.
+git remote set-url origin https://<TOKEN>@github.com/USUARIO/NOMBRE-REPO.git
+
+# 5. Agregar todos los archivos al área de preparación
 git add .
+
+# 6. Verificar qué archivos están listos para confirmar
 git status
-git commit -m "Mensaje"
-git push -u origen master
+
+# 7. Confirmar los cambios con un mensaje
+git commit -m "Primer commit"
+
+# 8. Subir al repositorio remoto (rama master o main, según sea el caso)
+git push -u origin master
+# o si la rama se llama main
+# git push -u origin main
