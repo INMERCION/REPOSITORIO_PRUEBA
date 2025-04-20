@@ -1,0 +1,11 @@
+git init
+git config user.name (NOMBRE DE USUARIO)
+git config user.email (CORREO DE GITHUB)
+
+git config --list
+git remote add origen (URL REPOSITORIO EN GITHUB)
+git remote set-url https://(TOKEN)@(URL DEL REPOSITORO)
+git add .
+git status
+git commit -m "Mensaje"
+git push -u origen master
